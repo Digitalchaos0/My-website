@@ -1,0 +1,179 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 400% 400%;
+  animation: gradientAnimation 25s ease infinite;
+  color: white;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Added fade effect */
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffffff;
+  animation: bounceIn 2s ease-out;
+}
+
+.hero-description {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #fff;
+  animation: fadeInText 2.5s 1s forwards;
+}
+
+.cta-button {
+  background-color: #ff00ff;
+  padding: 20px 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  position: relative;
+  z-index: 20;
+}
+
+.cta-button:hover {
+  background-color: #ff4f81;
+  transform: scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* About Section */
+.about-section {
+  display: none; /* Hidden initially */
+  padding: 60px 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  text-align: center;
+  transition: opacity 1s ease-in-out; /* Added fade effect */
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #111;
+  color: #aaa;
+  padding: 15px 30px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 1rem;
+  border-top: 2px solid #444;
+  animation: slideInFooter 1.5s ease-out;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFooter {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
